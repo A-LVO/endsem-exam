@@ -1,0 +1,119 @@
+/* style.css */
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #003366;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Faculty grid layout */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Faculty card styling */
+.faculty-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.faculty-card img {
+    display: block;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+}
+
+.faculty-card h2 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.title {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.email {
+    display: block;
+    margin-bottom: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+/* Research tags styling */
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.research-tags li {
+    background-color: #e0e0e0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .faculty-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .faculty-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .faculty-card {
+        padding: 1rem;
+    }
+
+    .faculty-card h2 {
+        font-size: 1.3rem;
+    }
+}
